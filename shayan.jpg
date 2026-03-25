@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Shayan ❤️</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #fff);
+}
+
+.heart {
+  font-size: 60px;
+  cursor: pointer;
+  margin-top: 100px;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ff4d88;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.love-img {
+  width: 320px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 10px 25px rgba(255, 0, 100, 0.4);
+}
+
+.romantic-text {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #cc0066;
+}
+</style>
+</head>
+
+<body>
+
+<div id="page1">
+  <div class="heart" onclick="nextPage(2)">❤️</div>
+  <p>Click the Heart</p>
+</div>
+
+<div id="page2" class="hidden">
+  <div class="heart" onclick="nextPage(3)">❤️</div>
+  <p>Press Again ❤️</p>
+</div>
+
+<div id="page3" class="hidden">
+  <h2>Shayan 💖</h2>
+
+  <img src="shayan.jpg" class="love-img">
+
+  <div class="romantic-text">
+    <p>I am really sorry... 🥺</p>
+    <p>Me tumhare sath hoti hoon to khush hoti hoon ❤️</p>
+    <p>Tumhare bagair mera dil nahi lagta 💔</p>
+    <p>Tum meri dhal ho.</p>
+    <p>Tum meri jaan ho 🫠</p>
+    <p>Mera har sukoon tum se hai.</p>
+    <p>Mujhe sirf tum chahiye... hamesha 💕</p>
+  </div>
+
+  <button onclick="nextPage(4)">Next</button>
+</div>
+
+<div id="page4" class="hidden">
+  <h1>❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️</h1>
+  <button onclick="nextPage(5)">Next</button>
+</div>
+
+<div id="page5" class="hidden">
+  <h3>Choose One 💕</h3>
+  <button onclick="showLove()">Love You</button>
+  <button onclick="showMiss()">Miss You</button>
+</div>
+
+<div id="result" class="hidden">
+  <h2 id="finalMessage"></h2>
+  <p style="font-size:18px; margin-top:15px;">
+    Promise me you won’t leave me… 🥺❤️
+  </p>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+  document.getElementById("page1").classList.add("hidden");
+  document.getElementById("page2").classList.add("hidden");
+  document.getElementById("page3").classList.add("hidden");
+  document.getElementById("page4").classList.add("hidden");
+  document.getElementById("page5").classList.add("hidden");
+  document.getElementById("result").classList.add("hidden");
+  document.getElementById("page" + pageNumber).classList.remove("hidden");
+}
+
+function showLove() {
+  document.getElementById("page5").classList.add("hidden");
+  document.getElementById("result").classList.remove("hidden");
+  document.getElementById("finalMessage").innerText = "Love You Too ❤️ Always and Forever!";
+}
+
+function showMiss() {
+  document.getElementById("page5").classList.add("hidden");
+  document.getElementById("result").classList.remove("hidden");
+  document.getElementById("finalMessage").innerText = "Miss You Too ❤️ I Need You!";
+}
+</script>
+
+</body>
+</html>
